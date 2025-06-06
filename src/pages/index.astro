@@ -1,42 +1,86 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Botones from '../components/Botones.astro';
 ---
 
 <Layout title="Control de Bienes Informáticos">
 	<main>
-		<h1 class="text-center text-4xl font-extrabold">Control de Bienes Informáticos</h1>
 		<Header />
+		<h1 class="text-center text-4xl font-extrabold">Control de Bienes Informáticos</h1>
 	</main>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/registro">Registro</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/impresion">Impresion de Controles</a>
-	</button>
-	<h2 class="mt-8 text-2xl font-bold">Informes</h2>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/DAP_SIS">Por DAP_SIS</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/IPyDirFisica">IP y Dirección Física</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/equiposSinIp">Equipos sin IP</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/ipDisponible">IP Disponible</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/area">Por Área</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/areaEspecific">Por Área Específica</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/responsable">Por Responsable</a>
-	</button>
-	<button class="mt-4 px-4 py-2 bg-accent rounded hover:bg-accent-dark">
-		<a href="/menu/responsableEspecific">Por Responsable Específico</a>
-	</button>
-</Layout>
+	<div class="flex justify-center mt-4">
+		<h2 class="mt-8 mb-2 text-2xl font-bold">Informes</h2>
+	</div>
+
+	<div class="flex justify-center">
+		<div class="flex space-x-4 px-4">
+			<div class="flex flex-col space-y-4">
+				<a href="/menu/registro">
+				<button type="button" class="w-40 h-20 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+					Registro
+				</button>
+				</a>
+				
+				<a href="/menu/impresion">
+				<button type="button" class="w-40 h-20 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+					Impresion de Controles
+				</button>
+				</a>
+			</div>
+			
+			<div class="flex flex-col space-y-4">
+				<a href="/menu/DAP_SIS">
+					<button class="w-40 h-20 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+						Por DAP_SIS
+					</button>
+				</a>
+				
+				<a href="/menu/IPyDirFisica">
+					<button class="w-40 h-20 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+						IP y Dirección Física
+					</button>
+				</a>
+				
+				<a href="/menu/equiposSinIp">
+					<button class="w-40 h-20 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+						Equipos sin IP
+					</button>
+				</a>
+				
+				<a href="/menu/ipDisponible">
+					<button class="w-40 h-20 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+						IP Disponible
+					</button>
+				</a>
+			</div>
+			
+			<div class="flex flex-col space-y-4">
+				<a href="/menu/area">
+					<button class="w-40 h-20 focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">
+						Por Área
+					</button>
+				</a>
+				
+				<a href="/menu/areaEspecific">
+					<button class="w-40 h-20 focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">
+						Por Área Específica
+					</button>
+				</a>
+				
+				<a href="/menu/responsable">
+					<button class="w-40 h-20 focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">
+						Por Responsable
+					</button>
+				</a>
+				
+				<a href="/menu/responsableEspecific">
+					<button class="w-40 h-20 focus:outline-none text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-orange-900">
+						Por Responsable Específico
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	</Layout>
+	
