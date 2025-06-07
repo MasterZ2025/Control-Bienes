@@ -1,0 +1,16 @@
+---
+import CDMXlogo from '../assets/CDMX_logo.png';
+import "../styles/global.css";
+
+const fechaActual = new Date();
+const opcionesFecha: Intl.DateTimeFormatOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
+const fecha = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+---
+
+<header class="flex items-center w-full">
+	<img src={CDMXlogo.src} alt="CDMX Logo" class="mx-1 my-4 w-50 h-auto">
+	<div class="text-gray-500 absolute inset-x-0 text-center">
+		<h1 class="font-bold">REGISTRO</h1>
+		<h2 class="font-medium">{fecha}</h2>
+	</div>
+</header>

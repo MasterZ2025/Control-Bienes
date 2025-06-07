@@ -1,7 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Botones from '../components/Botones.astro';
+
+const fechaActual = new Date();
+const opcionesFecha: Intl.DateTimeFormatOptions = { month: 'short', year: 'numeric' };
+let mesyaño = fechaActual.toLocaleDateString('es-ES', opcionesFecha);
+mesyaño = mesyaño.charAt(0).toUpperCase() + mesyaño.slice(1);
 ---
 
 <Layout title="Control de Bienes Informáticos">
@@ -81,6 +85,11 @@ import Botones from '../components/Botones.astro';
 				</a>
 			</div>
 		</div>
+	</div>
+	<div class="flex flex-col text-center mt-65 bg-green-500 h-18.5 text-white">
+		<h3 class="font-medium">Área de Desarrollo y Control de Sistemas de la Información de Alumbrado Público</h3>
+		<h3 class="font-medium">Ing. Manuel Alejandro Ramos Parra</h3>
+		<h3 class="font-medium">{mesyaño}</h3>
 	</div>
 	</Layout>
 	

@@ -1,7 +1,88 @@
 ---
+import HeaderRegistro from "../../components/HeaderRegistro.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Registro">
-    Registro
+    <HeaderRegistro />
+        <h3 class="text-center font-semibold">
+            INFORMACIÓN GENERAL
+        </h3>
+    <div class="flex space-x-10">
+        <div class="flex flex-col">
+            <form class="max-w-25 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        No. DAP-SIS
+                    </label>
+                    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </form>
+
+            <form class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="tipo_equipos" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Tipo de Equipo
+                    </label>
+                    <select id="tipo_equipos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Seleccione una opción</option>
+                        <option>PC</option>
+                        <option>ALL IN ONE</option>
+                        <option>LAPTOP</option>
+                        <option>NOTEBOOK</option>
+                        <option>IMPRESORA</option>
+                        <option>FOTOCOPIADORA</option>
+                    </select>
+                </div>
+            </form>
+
+            <form class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Modelo
+                    </label>
+                    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </form>
+
+            <form class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Núm Inventario
+                    </label>
+                    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </form>
+        </div>
+
+        <div class="flex flex-col">
+            <form class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Marca
+                    </label>
+                    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </form>
+
+            <form class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Número serie
+                    </label>
+                    <input type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </form>
+
+            <fieldset>
+                <legend class="sr-only"></legend>
+
+                <div>
+                    <input checked id="checkbox-1" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Es impresora o fotocopiadora</label>
+                </div>
+            </fieldset>
+            
+        </div>
+    </div>
 </Layout>
