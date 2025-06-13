@@ -1,0 +1,67 @@
+[
+  {
+    "Número":1,
+    "Nombre":"M. EN I. CARMINA GARCÍA ROBLES",
+    "Cargo":"DIRECTORA DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":2,
+    "Nombre":"LUIS ALFREDO SÁNCHEZ SANDÍN",
+    "Cargo":"SUBDIRECTOR TÉCNICO DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":3,
+    "Nombre":"D.I. JOSÉ ALEJANDRO CANSECO FLORES",
+    "Cargo":"SUBDIRECTOR DE OPERACIÓN Y MANTENIMIENTO DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":4,
+    "Nombre":"ING. PEDRO BONILLA BERNAL",
+    "Cargo":"JUD DE PROYECTOS DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":5,
+    "Nombre":"MATILDE GONZÁLEZ MILLÁN",
+    "Cargo":"JUD DE SUPERVISIÓN Y SEGUIMIENTO DE OBRA  DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":6,
+    "Nombre":"ING. ARQ. LEONARDO MUÑOZ MENDOZA",
+    "Cargo":"JUD DE MANTENIMIENTO DE ALUMBRADO PÚBLICO A1"
+  },
+  {
+    "Número":7,
+    "Nombre":"HÉCTOR REYES CARMONA",
+    "Cargo":"JUD DE MANTENIMIENTO DE ALUMBRADO PÚBLICO A3"
+  },
+  {
+    "Número":8,
+    "Nombre":"ROBERTO LIRA MENDOZA",
+    "Cargo":"JUD DE MANTENIMIENTO DE ALUMBRADO PÚBLICO A2"
+  },
+  {
+    "Número":9,
+    "Nombre":"LAURENCIO WALDO HERNÁNDEZ",
+    "Cargo":"JUD DE ALUMBRADO DECORATIVO Y SUPERPOSTES"
+  },
+  {
+    "Número":10,
+    "Nombre":"C.P. AIMÉ PINEDA JIMÉNEZ",
+    "Cargo":"JUD DE FACTURACIÓN DE SERVICIOS DE ELECTRICIDAD"
+  },
+  {
+    "Número":11,
+    "Nombre":"ING. MARCO ANTONIO ROSAS VILLEGAS",
+    "Cargo":"JUD DE LABORATORIO DE ALUMBRADO PÚBLICO"
+  },
+  {
+    "Número":12,
+    "Nombre":"EMMA GALICIA DE LA O",
+    "Cargo":"ENCARGADA DE LA OFICINA ADMINISTRATIVA DE LA DAP"
+  },
+  {
+    "Número":13,
+    "Nombre":"ING. MANUEL ALEJANDRO RAMOS PARRA",
+    "Cargo":"ENCARGADO DEL ÁREA DE DESARROLLO Y CONTROL DE SISTEMAS DE INFORMACIÓN DE LA DAP"
+  }
+]

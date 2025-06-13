@@ -1,0 +1,717 @@
+[
+  {
+    "Id":1,
+    "USUARIO":"GUERRERO PEREZ RENE",
+    "AREA":1.0
+  },
+  {
+    "Id":2,
+    "USUARIO":"NAVARRO JAIMES GERARDO",
+    "AREA":8.0
+  },
+  {
+    "Id":3,
+    "USUARIO":"SANTIAGO AGUILAR LAURA",
+    "AREA":null
+  },
+  {
+    "Id":4,
+    "USUARIO":"CASAS GALICIA ARACELI MIRIAM",
+    "AREA":null
+  },
+  {
+    "Id":5,
+    "USUARIO":"CASTILLO CRUZ ROSA MARIA",
+    "AREA":null
+  },
+  {
+    "Id":6,
+    "USUARIO":"DELGADO HERNANDEZ PATRICIA",
+    "AREA":null
+  },
+  {
+    "Id":7,
+    "USUARIO":"ESPINOZA ROLDAN SERGIO",
+    "AREA":null
+  },
+  {
+    "Id":8,
+    "USUARIO":"HUERTA JUAREZ JESUS",
+    "AREA":null
+  },
+  {
+    "Id":9,
+    "USUARIO":"LOPEZ LOPEZ MARTIN",
+    "AREA":null
+  },
+  {
+    "Id":10,
+    "USUARIO":"LUCARIO MARTINEZ ZEFERINA",
+    "AREA":null
+  },
+  {
+    "Id":11,
+    "USUARIO":"MORA LECHUGA MARIA GUADALUPE",
+    "AREA":null
+  },
+  {
+    "Id":12,
+    "USUARIO":"REYES RODRIGUEZ JORGE",
+    "AREA":null
+  },
+  {
+    "Id":13,
+    "USUARIO":"RIOS MENDEZ ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":14,
+    "USUARIO":"SAAVEDRA CABRERA JUANA",
+    "AREA":null
+  },
+  {
+    "Id":16,
+    "USUARIO":"BRIEÑO GOMEZ MARIO",
+    "AREA":null
+  },
+  {
+    "Id":17,
+    "USUARIO":"GARCIA RANGEL  MARGARITA",
+    "AREA":null
+  },
+  {
+    "Id":18,
+    "USUARIO":"GARCIA ROBLES CARMINA",
+    "AREA":null
+  },
+  {
+    "Id":19,
+    "USUARIO":"HERNANDEZ ALVAREZ FERMINA",
+    "AREA":null
+  },
+  {
+    "Id":20,
+    "USUARIO":"GUZMAN ECHAVARRIA ISRAEL",
+    "AREA":null
+  },
+  {
+    "Id":21,
+    "USUARIO":"BAYLON CORNEJO JESSICA",
+    "AREA":null
+  },
+  {
+    "Id":22,
+    "USUARIO":"PEREZ VIRRUETA DIEGO",
+    "AREA":null
+  },
+  {
+    "Id":23,
+    "USUARIO":"PLAZAS SANCHEZ FRANCISCO",
+    "AREA":null
+  },
+  {
+    "Id":24,
+    "USUARIO":"REYNOSO VALLE SANDRA",
+    "AREA":null
+  },
+  {
+    "Id":25,
+    "USUARIO":"SALAS MARQUEZ EDUARDO",
+    "AREA":null
+  },
+  {
+    "Id":26,
+    "USUARIO":"SALGADO NIETO NATALIA",
+    "AREA":null
+  },
+  {
+    "Id":27,
+    "USUARIO":"TELLEZ ROSAS MITZY GRISEL",
+    "AREA":null
+  },
+  {
+    "Id":28,
+    "USUARIO":"VILLEDA OCARIZ ULISES",
+    "AREA":null
+  },
+  {
+    "Id":29,
+    "USUARIO":"CASTRO SANCHEZ CRISTINA",
+    "AREA":null
+  },
+  {
+    "Id":30,
+    "USUARIO":"CRUZ DIAZ JANET",
+    "AREA":null
+  },
+  {
+    "Id":31,
+    "USUARIO":"GOMEZ DEL PINO OMAR AUGUSTO",
+    "AREA":null
+  },
+  {
+    "Id":32,
+    "USUARIO":"GUTIERREZ MENESES MARIA DE JESUS",
+    "AREA":null
+  },
+  {
+    "Id":33,
+    "USUARIO":"JIMENEZ PINEDA AIME",
+    "AREA":null
+  },
+  {
+    "Id":34,
+    "USUARIO":"MAYA GORDILLO CESAR",
+    "AREA":null
+  },
+  {
+    "Id":35,
+    "USUARIO":"MONTIEL FLORES KARINA",
+    "AREA":null
+  },
+  {
+    "Id":36,
+    "USUARIO":"MORALES SERRANO LILIA",
+    "AREA":null
+  },
+  {
+    "Id":37,
+    "USUARIO":"PEREZ OLMOS ANA LILIA",
+    "AREA":null
+  },
+  {
+    "Id":38,
+    "USUARIO":"RAMOS GARCIA JUANA HORTENSIA",
+    "AREA":null
+  },
+  {
+    "Id":39,
+    "USUARIO":"ROJAS LOPEZ ELVIA FABIOLA",
+    "AREA":null
+  },
+  {
+    "Id":40,
+    "USUARIO":"VALDEZ MARTINEZ CRISANTO ARTURO",
+    "AREA":null
+  },
+  {
+    "Id":41,
+    "USUARIO":"VALENCIA GONZALEZ MANUEL",
+    "AREA":null
+  },
+  {
+    "Id":42,
+    "USUARIO":"VELASCO GARCIA ILDEFONSA",
+    "AREA":null
+  },
+  {
+    "Id":43,
+    "USUARIO":"AGUIRRE GUTIERREZ FERNANDO",
+    "AREA":null
+  },
+  {
+    "Id":44,
+    "USUARIO":"CHALICO MEJIA JESUS SALVADOR",
+    "AREA":null
+  },
+  {
+    "Id":45,
+    "USUARIO":"DAVILA RODRIGUEZ ANGELICA LILIANA",
+    "AREA":null
+  },
+  {
+    "Id":46,
+    "USUARIO":"GARCIA RUVALCABA ROCIO ALEJANDRA",
+    "AREA":null
+  },
+  {
+    "Id":47,
+    "USUARIO":"GUERRA ALVAREZ RUY ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":48,
+    "USUARIO":"HERNANDEZ CORNEJO GLORIA MIRIAM",
+    "AREA":null
+  },
+  {
+    "Id":50,
+    "USUARIO":"PERALES OLVERA ROBERTO",
+    "AREA":null
+  },
+  {
+    "Id":51,
+    "USUARIO":"RAMOS PARRA MANUEL ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":52,
+    "USUARIO":"RODRIGUEZ MORENO ALMA MONICA",
+    "AREA":null
+  },
+  {
+    "Id":53,
+    "USUARIO":"SANCHEZ ARELLANO ALEJANDRA",
+    "AREA":null
+  },
+  {
+    "Id":54,
+    "USUARIO":"BONILLA BERNAL PEDRO",
+    "AREA":null
+  },
+  {
+    "Id":55,
+    "USUARIO":"GARCIA HERNANDEZ YESENIA",
+    "AREA":null
+  },
+  {
+    "Id":56,
+    "USUARIO":"GARCIA ROBLES NALLELY",
+    "AREA":null
+  },
+  {
+    "Id":57,
+    "USUARIO":"MARTINEZ LICONA JAKELINE",
+    "AREA":null
+  },
+  {
+    "Id":58,
+    "USUARIO":"ALCIBAR MENDOZA VIRGINIA",
+    "AREA":null
+  },
+  {
+    "Id":59,
+    "USUARIO":"ARMENTA GARCIA JAVIER",
+    "AREA":null
+  },
+  {
+    "Id":60,
+    "USUARIO":"AYALA CASTRO BEATRIZ",
+    "AREA":null
+  },
+  {
+    "Id":61,
+    "USUARIO":"BARRIENTOS ROSAS CRISTINA",
+    "AREA":null
+  },
+  {
+    "Id":62,
+    "USUARIO":"BUENDIA DELGADO MARIA DEL CARMEN",
+    "AREA":null
+  },
+  {
+    "Id":63,
+    "USUARIO":"CASTILLO CRUZ ROCIO",
+    "AREA":null
+  },
+  {
+    "Id":64,
+    "USUARIO":"CUEVAS DEL RIO ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":65,
+    "USUARIO":"ENCISO RAMOS MAGDALENA",
+    "AREA":null
+  },
+  {
+    "Id":66,
+    "USUARIO":"GALICIA DE LA O EMMA",
+    "AREA":null
+  },
+  {
+    "Id":67,
+    "USUARIO":"GARCIA RAMIREZ CLAUDIA",
+    "AREA":null
+  },
+  {
+    "Id":68,
+    "USUARIO":"HERNANDEZ ESCOBAR MARTHA PATRICIA",
+    "AREA":null
+  },
+  {
+    "Id":69,
+    "USUARIO":"LOBATON GUTIERREZ MATILDE",
+    "AREA":null
+  },
+  {
+    "Id":70,
+    "USUARIO":"MARTINEZ VAZQUEZ ALEJANDRA",
+    "AREA":null
+  },
+  {
+    "Id":71,
+    "USUARIO":"MINAYA PANTOJA HECTOR BENJAMIN",
+    "AREA":null
+  },
+  {
+    "Id":72,
+    "USUARIO":"MORENO PADRON AZUCENA",
+    "AREA":null
+  },
+  {
+    "Id":73,
+    "USUARIO":"TELLEZ ALVARADO CLARA",
+    "AREA":null
+  },
+  {
+    "Id":74,
+    "USUARIO":"CRUZ VARGAS CONCEPCION",
+    "AREA":null
+  },
+  {
+    "Id":75,
+    "USUARIO":"CUEVAS DEL RIO TERESA",
+    "AREA":null
+  },
+  {
+    "Id":76,
+    "USUARIO":"GUERRERO ZAVALA MARTHA",
+    "AREA":null
+  },
+  {
+    "Id":77,
+    "USUARIO":"MARTINEZ DIAZ MARIA EUGENIA",
+    "AREA":null
+  },
+  {
+    "Id":78,
+    "USUARIO":"MARTINEZ DIAZ MARIA LUCIA",
+    "AREA":null
+  },
+  {
+    "Id":79,
+    "USUARIO":"REYES JUAREZ SILVIA",
+    "AREA":null
+  },
+  {
+    "Id":80,
+    "USUARIO":"VARGAS CRUZ GUADALUPE",
+    "AREA":null
+  },
+  {
+    "Id":81,
+    "USUARIO":"BARRERA BELMONT MARIA DE JESUS",
+    "AREA":null
+  },
+  {
+    "Id":82,
+    "USUARIO":"CORNEJO CRUZ ELSA",
+    "AREA":null
+  },
+  {
+    "Id":83,
+    "USUARIO":"CORTEZ JARQUIN LUIS JESUS",
+    "AREA":null
+  },
+  {
+    "Id":84,
+    "USUARIO":"CORTEZ MARTINEZ GUILLERMO",
+    "AREA":null
+  },
+  {
+    "Id":85,
+    "USUARIO":"CUEVAS MOURET MARTHA",
+    "AREA":null
+  },
+  {
+    "Id":86,
+    "USUARIO":"FRANCO GOMEZ FABIOLA",
+    "AREA":null
+  },
+  {
+    "Id":87,
+    "USUARIO":"GARNICA HURTADO JUAN CARLOS",
+    "AREA":null
+  },
+  {
+    "Id":88,
+    "USUARIO":"HERNANDEZ BUSTAMANTE MARIA DEL ROSARIO",
+    "AREA":null
+  },
+  {
+    "Id":89,
+    "USUARIO":"LEMUS FLORES RICARDO",
+    "AREA":null
+  },
+  {
+    "Id":90,
+    "USUARIO":"MEJIA AGUIRRE MARIA DE LOURDES",
+    "AREA":null
+  },
+  {
+    "Id":91,
+    "USUARIO":"NAVA RODRIGUEZ HECTOR DANIEL",
+    "AREA":null
+  },
+  {
+    "Id":92,
+    "USUARIO":"RAMIREZ TREJO EPIGMENIO",
+    "AREA":null
+  },
+  {
+    "Id":93,
+    "USUARIO":"SALAZAR GONZALEZ MARIA DE LOURDES",
+    "AREA":null
+  },
+  {
+    "Id":94,
+    "USUARIO":"TORRALVA SANTIAGO IRMA",
+    "AREA":null
+  },
+  {
+    "Id":95,
+    "USUARIO":"VELASCO ALVAREZ ROCIO",
+    "AREA":null
+  },
+  {
+    "Id":96,
+    "USUARIO":"VILLEGAS JIMENEZ GABRIELA",
+    "AREA":null
+  },
+  {
+    "Id":97,
+    "USUARIO":"ZAVALETA CASTILLO RAUL",
+    "AREA":null
+  },
+  {
+    "Id":98,
+    "USUARIO":"BARBA HERMOSILLO GABRIEL",
+    "AREA":null
+  },
+  {
+    "Id":99,
+    "USUARIO":"BENAVIDES PADILLA CELIA",
+    "AREA":null
+  },
+  {
+    "Id":100,
+    "USUARIO":"HERNANDEZ HERNANDEZ RAUL",
+    "AREA":null
+  },
+  {
+    "Id":101,
+    "USUARIO":"NIEVES VARGAS ANA MARIA",
+    "AREA":null
+  },
+  {
+    "Id":102,
+    "USUARIO":"PEÑA ZENDEJAS OSCAR",
+    "AREA":null
+  },
+  {
+    "Id":103,
+    "USUARIO":"CABALLERO ADAME MIGUEL",
+    "AREA":null
+  },
+  {
+    "Id":104,
+    "USUARIO":"VARELA GARCIA ANDREA",
+    "AREA":null
+  },
+  {
+    "Id":105,
+    "USUARIO":"CARBAJAL VILLEGAS SANDRA",
+    "AREA":null
+  },
+  {
+    "Id":106,
+    "USUARIO":"CASTRO CUELLAR FABIOLA",
+    "AREA":null
+  },
+  {
+    "Id":107,
+    "USUARIO":"CUEVAS MENDEZ RUBI",
+    "AREA":null
+  },
+  {
+    "Id":108,
+    "USUARIO":"HERNANDEZ ALGOMEDA NAYELI",
+    "AREA":null
+  },
+  {
+    "Id":109,
+    "USUARIO":"JIMENEZ OSORIO ARACELI",
+    "AREA":null
+  },
+  {
+    "Id":110,
+    "USUARIO":"LOPEZ FIGUEROA ELIZABETH",
+    "AREA":null
+  },
+  {
+    "Id":111,
+    "USUARIO":"LORENZO HERNANDEZ SIMONA",
+    "AREA":null
+  },
+  {
+    "Id":112,
+    "USUARIO":"MALPICA CARDENAS FLORINA",
+    "AREA":null
+  },
+  {
+    "Id":113,
+    "USUARIO":"TOLENTINO ANGELES MARIBEL",
+    "AREA":null
+  },
+  {
+    "Id":114,
+    "USUARIO":"VELAZQUEZ PETRIARCE MARGARITA",
+    "AREA":null
+  },
+  {
+    "Id":115,
+    "USUARIO":"ZUNO MOCHEDANO ANA CECILIA",
+    "AREA":null
+  },
+  {
+    "Id":116,
+    "USUARIO":"ANGELINO MOLINA PATRICIA",
+    "AREA":null
+  },
+  {
+    "Id":117,
+    "USUARIO":"LOPEZ LEON DULCE",
+    "AREA":null
+  },
+  {
+    "Id":118,
+    "USUARIO":"MARTINEZ DIAZ JESUS",
+    "AREA":null
+  },
+  {
+    "Id":119,
+    "USUARIO":"MEJIA SALAS ROSARIO",
+    "AREA":null
+  },
+  {
+    "Id":120,
+    "USUARIO":"ROJAS LAZCANO ELIZABETH",
+    "AREA":null
+  },
+  {
+    "Id":121,
+    "USUARIO":"VALENCIA CADENA ANGELES",
+    "AREA":null
+  },
+  {
+    "Id":122,
+    "USUARIO":"ALVAREZ TORREZ BLANCA",
+    "AREA":null
+  },
+  {
+    "Id":123,
+    "USUARIO":"CRUZ HERNANDEZ PEDRO",
+    "AREA":null
+  },
+  {
+    "Id":124,
+    "USUARIO":"DE SANTIAGO GOMEZ ARTURO",
+    "AREA":null
+  },
+  {
+    "Id":125,
+    "USUARIO":"GARCIA ESPINOZA EDGAR ISMAEL",
+    "AREA":null
+  },
+  {
+    "Id":126,
+    "USUARIO":"GARCIA ESPINOZA JONATHAN",
+    "AREA":null
+  },
+  {
+    "Id":127,
+    "USUARIO":"GONZALEZ GUZMAN ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":128,
+    "USUARIO":"GUARNEROS MORALES MARIA PATRICIA",
+    "AREA":null
+  },
+  {
+    "Id":129,
+    "USUARIO":"HURTADO RENDON ALICIA CRISTINA",
+    "AREA":null
+  },
+  {
+    "Id":130,
+    "USUARIO":"LUNA HERNANDEZ MARIA REMEDIOS",
+    "AREA":null
+  },
+  {
+    "Id":131,
+    "USUARIO":"MARTINEZ MEJIA ISMAEL",
+    "AREA":null
+  },
+  {
+    "Id":132,
+    "USUARIO":"MUÑOZ MENDOZA LEONARDO",
+    "AREA":null
+  },
+  {
+    "Id":133,
+    "USUARIO":"CAÑADA GREGORIO YESSICA",
+    "AREA":null
+  },
+  {
+    "Id":134,
+    "USUARIO":"CARRANZA RICO LEONARDO",
+    "AREA":null
+  },
+  {
+    "Id":135,
+    "USUARIO":"MARTINEZ GOMEZ SILVIA",
+    "AREA":null
+  },
+  {
+    "Id":137,
+    "USUARIO":"LUIS ALFREDO SÁNCHEZ SANDÍN",
+    "AREA":null
+  },
+  {
+    "Id":138,
+    "USUARIO":"CANSECO FLORES JOSÉ ALEJANDRO",
+    "AREA":null
+  },
+  {
+    "Id":140,
+    "USUARIO":"GONZÁLEZ MILLÁN MATILDE",
+    "AREA":null
+  },
+  {
+    "Id":141,
+    "USUARIO":"MUÑOZ MENDOZA LEONARDO",
+    "AREA":null
+  },
+  {
+    "Id":142,
+    "USUARIO":"REYES CARMONA HÉCTOR",
+    "AREA":null
+  },
+  {
+    "Id":143,
+    "USUARIO":"LIRA MENDOZA ROBERTO",
+    "AREA":null
+  },
+  {
+    "Id":144,
+    "USUARIO":"WALDO HERNANDEZ LAURENCIO",
+    "AREA":null
+  },
+  {
+    "Id":145,
+    "USUARIO":"PINEDA JIMÉNEZ AIMÉ",
+    "AREA":null
+  },
+  {
+    "Id":146,
+    "USUARIO":"ROSAS VILLEGAS MARCO ANTONIO",
+    "AREA":null
+  },
+  {
+    "Id":149,
+    "USUARIO":"MARTINEZ HERNANDEZ RICARDO",
+    "AREA":null
+  }
+]

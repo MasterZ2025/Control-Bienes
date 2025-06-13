@@ -1,0 +1,53 @@
+---
+// src/pages/menu/impresion.astro
+---
+<html>
+  <head>
+    <title>Control Específico - Vista de Impresión</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <style>
+      @media print {
+        .no-print { display: none; }
+      }
+    </style>
+  </head>
+  <body class="p-8 bg-white text-black">
+    <header class="text-center mb-6">
+      <h1 class="text-3xl font-bold">REPORTE DE EQUIPO</h1>
+      <p class="text-sm">Control específico generado automáticamente</p>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+      <div><strong>Identificador:</strong> {Astro.url.searchParams.get('identificador')}</div>
+      <div><strong>Tipo de Equipo:</strong> {Astro.url.searchParams.get('tipoEquipo')}</div>
+      <div><strong>Modelo:</strong> {Astro.url.searchParams.get('modelo')}</div>
+      <div><strong>Inventario:</strong> {Astro.url.searchParams.get('inventario')}</div>
+      <div><strong>Marca:</strong> {Astro.url.searchParams.get('marca')}</div>
+      <div><strong>Número Serie:</strong> {Astro.url.searchParams.get('serie')}</div>
+      <div><strong>Es impresora/fotocopiadora:</strong> {Astro.url.searchParams.get('impresoraFotocopiadora') ? 'Sí' : 'No'}</div>
+      <div><strong>Capacidad Disco Duro:</strong> {Astro.url.searchParams.get('capacidad')}</div>
+      <div><strong>Tipo Procesador:</strong> {Astro.url.searchParams.get('procesadorTipo')}</div>
+      <div><strong>Velocidad Procesador:</strong> {Astro.url.searchParams.get('procesadorVelocidad')}</div>
+      <div><strong>Memoria RAM:</strong> {Astro.url.searchParams.get('RAM')}</div>
+      <div><strong>Segmento:</strong> {Astro.url.searchParams.get('segmento')}</div>
+      <div><strong>Marca Monitor:</strong> {Astro.url.searchParams.get('marcaMonitor')}</div>
+      <div><strong>Sistema Operativo:</strong> {Astro.url.searchParams.get('SO')}</div>
+      <div><strong>Lector CD/DVD:</strong> {Astro.url.searchParams.get('lector') ? 'Sí' : 'No'}</div>
+      <div><strong>Puertos USB:</strong> {Astro.url.searchParams.get('usb') ? 'Sí' : 'No'}</div>
+      <div><strong>Tarjetas SD:</strong> {Astro.url.searchParams.get('sd') ? 'Sí' : 'No'}</div>
+      <div><strong>Estado:</strong> {Astro.url.searchParams.get('estado')}</div>
+      <div><strong>Observaciones:</strong> {Astro.url.searchParams.get('observaciones')}</div>
+      <div><strong>Área:</strong> {Astro.url.searchParams.get('area')}</div>
+      <div><strong>Usuario:</strong> {Astro.url.searchParams.get('usuario')}</div>
+      <div><strong>Responsable:</strong> {Astro.url.searchParams.get('responsable')}</div>
+      <div><strong>Cargo:</strong> {Astro.url.searchParams.get('cargo')}</div>
+    </section>
+
+    <footer class="mt-8 text-center text-xs">
+      <p>Generado por el sistema de registro de equipos.</p>
+      <button onclick="window.print()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded no-print">Imprimir</button>
+    </footer>
+  </body>
+</html>

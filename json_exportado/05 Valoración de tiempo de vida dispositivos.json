@@ -1,0 +1,27 @@
+[
+  {
+    "Id":1,
+    "Tipo":"Equipo nuevo",
+    "Tiempo de Vida":"Menor a 1 año"
+  },
+  {
+    "Id":2,
+    "Tipo":"Equipo semi nuevo o en buen estado",
+    "Tiempo de Vida":"De 1 a 3 años"
+  },
+  {
+    "Id":3,
+    "Tipo":"Equipo viejo o condiciones aceptables",
+    "Tiempo de Vida":"Entre 3-5 años"
+  },
+  {
+    "Id":4,
+    "Tipo":"Equipo obsoleto",
+    "Tiempo de Vida":"Mayor a 6 años"
+  },
+  {
+    "Id":5,
+    "Tipo":"NO APLICA",
+    "Tiempo de Vida":"NO APLICA"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id":1,
+    "Tipo de equipo":"PC"
+  },
+  {
+    "Id":2,
+    "Tipo de equipo":"ALL IN ONE"
+  },
+  {
+    "Id":3,
+    "Tipo de equipo":"LAPTOP"
+  },
+  {
+    "Id":4,
+    "Tipo de equipo":"NOTEBOOK"
+  },
+  {
+    "Id":5,
+    "Tipo de equipo":"IMPRESORA"
+  },
+  {
+    "Id":6,
+    "Tipo de equipo":"FOTOCOPIADORA"
+  }
+]

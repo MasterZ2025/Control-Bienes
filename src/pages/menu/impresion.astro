@@ -1,9 +1,145 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Botones from  "../../components/Botones.astro"
+import Header from "../../components/Header.astro";
 ---
 
 <Layout title="Resguardo">
     <Botones />
-    Impresión de Controles
+    <Header />
+
+    <div class="mt-8">
+        <h1 class="text-center text-2xl font-bold">CONTROL DE BIEN INFORMÁTICO</h1>
+        <div class="flex flex-col space-y-4 mt-4 mx-auto max-w-lg">
+            <!-- Campo IDENTIFICADOR -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">IDENTIFICADOR</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('identificador')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo TIPO DE EQUIPO -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">TIPO DE EQUIPO</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('tipoEquipo')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo MODELO -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">MODELO</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('modelo')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo NÚMERO DE INVENTARIO -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">NÚMERO DE INVENTARIO</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('inventario')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo MARCA -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">MARCA</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('marca')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo NÚMERO DE SERIE -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">NÚMERO DE SERIE</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('serie')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo CAPACIDAD DISCO DURO -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">CAPACIDAD DISCO DURO</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('capacidad')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo TIPO PROCESADOR -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">TIPO PROCESADOR</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('procesadorTipo')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo VELOCIDAD PROCESADOR -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">VELOCIDAD PROCESADOR</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('procesadorVelocidad')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo CAPACIDAD MEMORIA RAM -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">CAPACIDAD MEMORIA RAM</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('RAM')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo ESTADO ACTUAL -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">ESTADO ACTUAL</label>
+                <input 
+                    type="text" 
+                    value={Astro.url.searchParams.get('estado')} 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >
+            </div>
+
+            <!-- Campo OBSERVACIONES -->
+            <div>
+                <label class="block text-sm font-medium text-gray-900 dark:text-white">OBSERVACIONES</label>
+                <textarea 
+                    readonly 
+                    class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                >{Astro.url.searchParams.get('observaciones')}</textarea>
+            </div>
+        </div>
+    </div>
 </Layout>
