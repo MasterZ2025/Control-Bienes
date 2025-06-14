@@ -9,25 +9,24 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
 <Layout title="Registro">
     <HeaderRegistro />
     <Botones />
-<form id="formulario-registro" action="/menu/impresion" method="GET">
+    <form id="formulario-registro">
         <h3 class="text-center font-semibold">
             INFORMACIÓN GENERAL
         </h3>
-<form id="formulario-registro" action="/menu/impresion" method="GET">
     <div class="flex space-x-10">
         <div class="flex flex-col">
-            <form class="max-w-25 mx-4">
+            <div class="max-w-25 mx-4">
                 <div class="mb-4">
-                    <label for="identificador" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         IDENTIFICADOR
                     </label>
                     <input name="identificador" type="text" id="identificador" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
-                    <label for="tipo_equipos" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Tipo de Equipo
                     </label>
                     <select name="tipoEquipo" id="tipo_equipos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -40,45 +39,45 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                         <option>FOTOCOPIADORA</option>
                     </select>
                 </div>
-            </form>
+            </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Modelo
                     </label>
                     <input name="modelo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Núm Inventario
                     </label>
                     <input name="inventario" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
         </div>
 
         <div class="flex flex-col">
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Marca
                     </label>
                     <input name="marca" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Número serie
                     </label>
                     <input name="serie" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
 
             <fieldset>
                 <legend class="sr-only"></legend>
@@ -98,41 +97,41 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
         INFORMACIÓN TÉCNICA
     </h3>
     <div class="flex flex-row">
-        <form class="max-w-50 mx-4">
+        <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Capacidad Disco Duro
                 </label>
                 <input name="capacidad" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
         
-        <form class="max-w-50 mx-4">
+        <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Tipo Procesador
                 </label>
                 <input name="procesadorTipo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
         
-        <form class="max-w-50 mx-4">
+        <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Velocidad Procesador
                 </label>
                 <input name="procesadorVelocidad" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
         
-        <form class="max-w-50 mx-4">
+        <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Capacidad Memoria RAM
                 </label>
                 <input name="RAM" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
     </div>
     
     <div class="flex space-x-10">
@@ -230,34 +229,34 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                 </div>
             </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Segmento
                     </label>
                     <input name="segmento" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
         </div>
 
         <div class="flex flex-col">
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Marca del Monitor
                     </label>
                     <input name="marcaMonitor" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
 
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Sistema Operativo
                     </label>
                     <input name="SO" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>   
+            </div>   
         </div>
         <fieldset>
             <legend class="sr-only"></legend>
@@ -286,23 +285,23 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
         DIAGNÓSTICO
     </h3>
     <div class="flex flex-col">
-        <form class="mx-4">
+        <div class="mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Estado Actual
                 </label>
                 <input name="estado" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
 
-        <form class="mx-4">
+        <div class="mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Observaciones
                 </label>
                 <input name="observaciones" type="text" id="small-input" class="block w-full p-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-        </form>
+        </div>
     </div>
 
     <h3 class="text-center font-semibold">
@@ -310,7 +309,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
     </h3>
 <div class="flex flex-col md:flex-row w-full gap-4 max-h-screen">
     <div class="w-full md:w-1/2 flex flex-col">
-        <form class="max-w-50 mx-4">
+        <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="usuario" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Usuario
@@ -319,18 +318,18 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                     <option>Seleccione una opción</option>
                     </select>
                 </div>
-            </form>
+        </div>
             
-            <form class="max-w-250 mx-4">
+            <div class="max-w-250 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Área
                     </label>
                     <input name="area" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
             
-            <form class="max-w-50 mx-4">
+            <div class="max-w-50 mx-4">
                 <div class="mb-4">
                     <label for="responsable" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Responsable
@@ -339,16 +338,16 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                         <option>Seleccione una opción</option>
                     </select>
                 </div>
-            </form>
+            </div>
             
-            <form class="max-w-250 mx-4">
+            <div class="max-w-250 mx-4">
                 <div class="mb-4">
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Cargo
                     </label>
                     <input name="cargo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
-            </form>
+            </div>
         </div>
 
     <div class="w-full md:w-1/2 flex items-center">
@@ -365,9 +364,9 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                 Nuevo RESPONSABLE
             </button>
             </a>
-
+            
             <a href="/">
-            <button type="button" class="w-50 h-10 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                <button type="button" class="w-50 h-10 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                 CERRAR Formulario
             </button>
             </a>
@@ -378,16 +377,14 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
             </button>
             </a>
             
-            <a href="/menu/test" class="row-span-2">
-            <button type="submit" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+            <button type="button" onclick="generarReporte()" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                 IMPRIMIR control específico
             </button>
-            </a>
+        </form>
 
         </div>
     </div>
 </div>
-</form>
 
 <div class="flex flex-row md:w-1/2 mx-4">
     <button type="button" class="w-15 h-10 flex items-center gap-2 focus:outline-none text-gray-200 bg-gray-200 hover:bg-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-600 dark:hover:bg-green-700 dark:focus:ring-gray-800">
@@ -418,5 +415,87 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
         NUEVO REGISTO
     </button>
 </div>
-<Botones />
+
+<script>
+function generarReporte() {
+    const f = document.getElementById('formulario-registro') as HTMLFormElement | null;
+
+    if (!f) {
+        alert('Formulario no encontrado');
+        return;
+    }
+
+    const get = (name: string) => (f.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null)?.value || '';
+    const getCheck = (name: string) => (f.elements.namedItem(name) as HTMLInputElement | null)?.checked ? 'Sí' : 'No';
+
+    const data = {
+        identificador: get('identificador'),
+        tipoEquipo: get('tipoEquipo'),
+        modelo: get('modelo'),
+        inventario: get('inventario'),
+        marca: get('marca'),
+        serie: get('serie'),
+        impresoraFotocopiadora: getCheck('impresoraFotocopiadora'),
+        capacidad: get('capacidad'),
+        procesadorTipo: get('procesadorTipo'),
+        procesadorVelocidad: get('procesadorVelocidad'),
+        RAM: get('RAM'),
+        teclado: getCheck('teclado'),
+        tipoTeclado: get('tipoTecladocheckbox'),
+        monitor: getCheck('monitor'),
+        tipoMonitor: get('tipoMonitorcheckbox'),
+        mouse: getCheck('mouse'),
+        tipoMouse: get('tipoMousecheckbox'),
+        segmento: get('segmento'),
+        marcaMonitor: get('marcaMonitor'),
+        SO: get('SO'),
+        lector: getCheck('lector'),
+        usb: getCheck('usb'),
+        sd: getCheck('sd'),
+        estado: get('estado'),
+        observaciones: get('observaciones'),
+        usuario: get('usuario'),
+        area: get('area'),
+        responsable: get('responsable'),
+        cargo: get('cargo')
+    };
+
+    // Genera HTML del reporte
+    let html = `
+    <html>
+    <head>
+        <title>Reporte de Control</title>
+        <style>
+        body { font-family: sans-serif; padding: 40px; }
+        h1 { text-align: center; }
+        .linea { margin: 10px 0; }
+        </style>
+    </head>
+    <body>
+        <h1>Reporte de Control Específico</h1>
+        ${Object.entries(data).map(([key, val]) =>
+        `<div class='linea'><strong>${key}:</strong> ${val}</div>`
+        ).join('')}
+    </body>
+    </html>
+    `;
+
+    // Abre y muestra
+    const printWindow = window.open('', '', 'width=800,height=600');
+
+    if (printWindow) {
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+
+    printWindow.location.href = url;
+
+    printWindow.onload = () => {
+        printWindow.print();
+        URL.revokeObjectURL(url);
+    };
+    } else {
+        alert('No se pudo abrir la ventana de impresión. Desactiva el bloqueador de pop-ups.');
+    }
+}
+</script>
 </Layout>

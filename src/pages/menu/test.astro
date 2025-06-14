@@ -1,53 +1,254 @@
 ---
-// src/pages/menu/impresion.astro
+import Botones from "../../components/Botones.astro";
+import HeaderRegistro from "../../components/HeaderRegistro.astro";
+import Layout from "../../layouts/Layout.astro";
+import LeftArrow from "../../assets/left-previous-arrow.svg";
+import DoubleArrow from "../../assets/previous-back-arrow.svg";
 ---
-<html>
-  <head>
-    <title>Control Específico - Vista de Impresión</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <style>
-      @media print {
-        .no-print { display: none; }
+
+<Layout title="Registro">
+  <HeaderRegistro />
+  <Botones />
+
+  <form id="formulario-registro" class="space-y-6 p-4">
+    <!-- INFORMACIÓN GENERAL -->
+    <h3 class="text-center font-semibold">INFORMACIÓN GENERAL</h3>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label>Identificador</label>
+        <input name="identificador" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Tipo de Equipo</label>
+        <select name="tipoEquipo" class="w-full border p-2 rounded">
+          <option>Seleccione una opción</option>
+          <option>PC</option>
+          <option>ALL IN ONE</option>
+          <option>LAPTOP</option>
+          <option>NOTEBOOK</option>
+          <option>IMPRESORA</option>
+          <option>FOTOCOPIADORA</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Modelo</label>
+        <input name="modelo" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Núm Inventario</label>
+        <input name="inventario" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Marca</label>
+        <input name="marca" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Número serie</label>
+        <input name="serie" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div class="col-span-2">
+        <label>
+          <input name="impresoraFotocopiadora" type="checkbox" class="mr-2" />
+          Es impresora o fotocopiadora
+        </label>
+      </div>
+    </div>
+
+    <!-- INFORMACIÓN TÉCNICA -->
+    <h3 class="text-center font-semibold">INFORMACIÓN TÉCNICA</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label>Capacidad Disco Duro</label>
+        <input name="capacidad" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Tipo Procesador</label>
+        <input name="procesadorTipo" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Velocidad Procesador</label>
+        <input name="procesadorVelocidad" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Capacidad Memoria RAM</label>
+        <input name="RAM" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>
+          <input name="teclado" type="checkbox" class="mr-2" /> Teclado
+        </label>
+        <select name="tipoTecladocheckbox" class="w-full border p-2 rounded mt-2">
+          <option>Seleccione una opción</option>
+          <option>Menor a 1 año</option>
+          <option>De 1 a 3 años</option>
+          <option>Entre 3-5 años</option>
+          <option>Mayor a 6 años</option>
+          <option>NO APLICA</option>
+        </select>
+      </div>
+
+      <div>
+        <label>
+          <input name="monitor" type="checkbox" class="mr-2" /> Monitor
+        </label>
+        <select name="tipoMonitorcheckbox" class="w-full border p-2 rounded mt-2">
+          <option>Seleccione una opción</option>
+          <option>Menor a 1 año</option>
+          <option>De 1 a 3 años</option>
+          <option>Entre 3-5 años</option>
+          <option>Mayor a 6 años</option>
+          <option>NO APLICA</option>
+        </select>
+      </div>
+
+      <div>
+        <label>
+          <input name="mouse" type="checkbox" class="mr-2" /> Mouse
+        </label>
+        <select name="tipoMousecheckbox" class="w-full border p-2 rounded mt-2">
+          <option>Seleccione una opción</option>
+          <option>Menor a 1 año</option>
+          <option>De 1 a 3 años</option>
+          <option>Entre 3-5 años</option>
+          <option>Mayor a 6 años</option>
+          <option>NO APLICA</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Segmento</label>
+        <input name="segmento" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Marca del Monitor</label>
+        <input name="marcaMonitor" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label>Sistema Operativo</label>
+        <input name="SO" type="text" class="w-full border p-2 rounded" />
+      </div>
+
+      <div class="col-span-2">
+        <label><input name="lector" type="checkbox" class="mr-2" /> Lector de CD/DVD</label>
+        <label class="ml-4"><input name="usb" type="checkbox" class="mr-2" /> Puertos USB</label>
+        <label class="ml-4"><input name="sd" type="checkbox" class="mr-2" /> Lector de Tarjetas SD</label>
+      </div>
+    </div>
+
+    <!-- DIAGNÓSTICO -->
+    <h3 class="text-center font-semibold">DIAGNÓSTICO</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label>Estado Actual</label>
+        <input name="estado" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Observaciones</label>
+        <input name="observaciones" type="text" class="w-full border p-2 rounded" />
+      </div>
+    </div>
+
+    <!-- USUARIO Y RESPONSABLE -->
+    <h3 class="text-center font-semibold">USUARIO Y RESPONSABLE</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label>Usuario</label>
+        <input name="usuario" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Área</label>
+        <input name="area" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Responsable</label>
+        <input name="responsable" type="text" class="w-full border p-2 rounded" />
+      </div>
+      <div>
+        <label>Cargo</label>
+        <input name="cargo" type="text" class="w-full border p-2 rounded" />
+      </div>
+    </div>
+
+    <!-- BOTÓN IMPRIMIR -->
+    <div class="text-center mt-6">
+      <button type="button" onclick="generarReporte()" class="px-6 py-2 bg-green-600 text-white rounded">
+        IMPRIMIR control específico
+      </button>
+    </div>
+  </form>
+
+  <Botones />
+
+  <script>
+    function generarReporte() {
+      const f = document.getElementById('formulario-registro');
+      if (!f) return alert('Formulario no encontrado');
+      const form = f as HTMLFormElement;
+
+      const get = (name: string) => (form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null)?.value || '';
+      const getCheck = (name: string) => (form.elements.namedItem(name) as HTMLInputElement | null)?.checked ? 'Sí' : 'No';
+
+      const data = {
+        identificador: get('identificador'),
+        tipoEquipo: get('tipoEquipo'),
+        modelo: get('modelo'),
+        inventario: get('inventario'),
+        marca: get('marca'),
+        serie: get('serie'),
+        impresoraFotocopiadora: getCheck('impresoraFotocopiadora'),
+        capacidad: get('capacidad'),
+        procesadorTipo: get('procesadorTipo'),
+        procesadorVelocidad: get('procesadorVelocidad'),
+        RAM: get('RAM'),
+        teclado: getCheck('teclado'),
+        tipoTeclado: get('tipoTecladocheckbox'),
+        monitor: getCheck('monitor'),
+        tipoMonitor: get('tipoMonitorcheckbox'),
+        mouse: getCheck('mouse'),
+        tipoMouse: get('tipoMousecheckbox'),
+        segmento: get('segmento'),
+        marcaMonitor: get('marcaMonitor'),
+        SO: get('SO'),
+        lector: getCheck('lector'),
+        usb: getCheck('usb'),
+        sd: getCheck('sd'),
+        estado: get('estado'),
+        observaciones: get('observaciones'),
+        usuario: get('usuario'),
+        area: get('area'),
+        responsable: get('responsable'),
+        cargo: get('cargo')
+      };
+
+      const html = `
+        <html><head><title>Reporte</title></head>
+        <body>
+          <h1>Reporte de Control Específico</h1>
+          ${Object.entries(data).map(([k, v]) => `<div><strong>${k}:</strong> ${v}</div>`).join('')}
+        </body></html>
+      `;
+
+      const blob = new Blob([html], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      const win = window.open(url, '_blank', 'width=800,height=600');
+      if (win) {
+        win.onload = () => {
+          win.print();
+          URL.revokeObjectURL(url);
+        };
+      } else {
+        alert('Permite las ventanas emergentes para imprimir.');
       }
-    </style>
-  </head>
-  <body class="p-8 bg-white text-black">
-    <header class="text-center mb-6">
-      <h1 class="text-3xl font-bold">REPORTE DE EQUIPO</h1>
-      <p class="text-sm">Control específico generado automáticamente</p>
-    </header>
-
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-      <div><strong>Identificador:</strong> {Astro.url.searchParams.get('identificador')}</div>
-      <div><strong>Tipo de Equipo:</strong> {Astro.url.searchParams.get('tipoEquipo')}</div>
-      <div><strong>Modelo:</strong> {Astro.url.searchParams.get('modelo')}</div>
-      <div><strong>Inventario:</strong> {Astro.url.searchParams.get('inventario')}</div>
-      <div><strong>Marca:</strong> {Astro.url.searchParams.get('marca')}</div>
-      <div><strong>Número Serie:</strong> {Astro.url.searchParams.get('serie')}</div>
-      <div><strong>Es impresora/fotocopiadora:</strong> {Astro.url.searchParams.get('impresoraFotocopiadora') ? 'Sí' : 'No'}</div>
-      <div><strong>Capacidad Disco Duro:</strong> {Astro.url.searchParams.get('capacidad')}</div>
-      <div><strong>Tipo Procesador:</strong> {Astro.url.searchParams.get('procesadorTipo')}</div>
-      <div><strong>Velocidad Procesador:</strong> {Astro.url.searchParams.get('procesadorVelocidad')}</div>
-      <div><strong>Memoria RAM:</strong> {Astro.url.searchParams.get('RAM')}</div>
-      <div><strong>Segmento:</strong> {Astro.url.searchParams.get('segmento')}</div>
-      <div><strong>Marca Monitor:</strong> {Astro.url.searchParams.get('marcaMonitor')}</div>
-      <div><strong>Sistema Operativo:</strong> {Astro.url.searchParams.get('SO')}</div>
-      <div><strong>Lector CD/DVD:</strong> {Astro.url.searchParams.get('lector') ? 'Sí' : 'No'}</div>
-      <div><strong>Puertos USB:</strong> {Astro.url.searchParams.get('usb') ? 'Sí' : 'No'}</div>
-      <div><strong>Tarjetas SD:</strong> {Astro.url.searchParams.get('sd') ? 'Sí' : 'No'}</div>
-      <div><strong>Estado:</strong> {Astro.url.searchParams.get('estado')}</div>
-      <div><strong>Observaciones:</strong> {Astro.url.searchParams.get('observaciones')}</div>
-      <div><strong>Área:</strong> {Astro.url.searchParams.get('area')}</div>
-      <div><strong>Usuario:</strong> {Astro.url.searchParams.get('usuario')}</div>
-      <div><strong>Responsable:</strong> {Astro.url.searchParams.get('responsable')}</div>
-      <div><strong>Cargo:</strong> {Astro.url.searchParams.get('cargo')}</div>
-    </section>
-
-    <footer class="mt-8 text-center text-xs">
-      <p>Generado por el sistema de registro de equipos.</p>
-      <button onclick="window.print()" class="mt-4 px-4 py-2 bg-green-600 text-white rounded no-print">Imprimir</button>
-    </footer>
-  </body>
-</html>
+    }
+  </script>
+</Layout>
