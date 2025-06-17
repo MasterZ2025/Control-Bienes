@@ -377,7 +377,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
             </button>
             </a>
             
-            <button type="button" onclick="generarReporte()" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+            <button type="button" id="btnImprimir" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                 IMPRIMIR control específico
             </button>
         </form>
@@ -417,85 +417,39 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
 </div>
 
 <script>
-function generarReporte() {
-    const f = document.getElementById('formulario-registro') as HTMLFormElement | null;
+const btnImprimir = document.getElementById('btnImprimir');
+if (btnImprimir) {
+  btnImprimir.addEventListener('click', function() {
+    const nombre = (document.getElementById('nombre') as HTMLInputElement | null)?.value || '';
+    const apellido = (document.getElementById('apellido') as HTMLInputElement | null)?.value || '';
+    // ...otros campos...
 
-    if (!f) {
-        alert('Formulario no encontrado');
-        return;
-    }
+    const datos = { nombre, apellido /*, otros campos */ };
 
-    const get = (name: string) => (f.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement | null)?.value || '';
-    const getCheck = (name: string) => (f.elements.namedItem(name) as HTMLInputElement | null)?.checked ? 'Sí' : 'No';
-
-    const data = {
-        identificador: get('identificador'),
-        tipoEquipo: get('tipoEquipo'),
-        modelo: get('modelo'),
-        inventario: get('inventario'),
-        marca: get('marca'),
-        serie: get('serie'),
-        impresoraFotocopiadora: getCheck('impresoraFotocopiadora'),
-        capacidad: get('capacidad'),
-        procesadorTipo: get('procesadorTipo'),
-        procesadorVelocidad: get('procesadorVelocidad'),
-        RAM: get('RAM'),
-        teclado: getCheck('teclado'),
-        tipoTeclado: get('tipoTecladocheckbox'),
-        monitor: getCheck('monitor'),
-        tipoMonitor: get('tipoMonitorcheckbox'),
-        mouse: getCheck('mouse'),
-        tipoMouse: get('tipoMousecheckbox'),
-        segmento: get('segmento'),
-        marcaMonitor: get('marcaMonitor'),
-        SO: get('SO'),
-        lector: getCheck('lector'),
-        usb: getCheck('usb'),
-        sd: getCheck('sd'),
-        estado: get('estado'),
-        observaciones: get('observaciones'),
-        usuario: get('usuario'),
-        area: get('area'),
-        responsable: get('responsable'),
-        cargo: get('cargo')
-    };
-
-    // Genera HTML del reporte
-    let html = `
-    <html>
-    <head>
-        <title>Reporte de Control</title>
-        <style>
-        body { font-family: sans-serif; padding: 40px; }
-        h1 { text-align: center; }
-        .linea { margin: 10px 0; }
-        </style>
-    </head>
-    <body>
-        <h1>Reporte de Control Específico</h1>
-        ${Object.entries(data).map(([key, val]) =>
-        `<div class='linea'><strong>${key}:</strong> ${val}</div>`
-        ).join('')}
-    </body>
-    </html>
+    let reporte = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Reporte de Control Específico</title>
+      </head>
+      <body>
+        <h2>Reporte de Control Específico</h2>
+        <p><strong>Nombre:</strong> ${nombre}</p>
+        <p><strong>Apellido:</strong> ${apellido}</p>
+        <!-- ...otros campos... -->
+      </body>
+      </html>
     `;
-
-    // Abre y muestra
-    const printWindow = window.open('', '', 'width=800,height=600');
-
-    if (printWindow) {
-    const blob = new Blob([html], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-
-    printWindow.location.href = url;
-
-    printWindow.onload = () => {
-        printWindow.print();
-        URL.revokeObjectURL(url);
-    };
+    const ventana = window.open('', '', 'width=800,height=600');
+    if (ventana) {
+      ventana.document.write(reporte);
+      ventana.document.close();
+      ventana.print();
     } else {
-        alert('No se pudo abrir la ventana de impresión. Desactiva el bloqueador de pop-ups.');
+      alert('No se pudo abrir la ventana de impresión. Por favor, permita las ventanas emergentes en su navegador.');
     }
+  });
 }
 </script>
 </Layout>
