@@ -9,7 +9,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
 <Layout title="Registro">
     <HeaderRegistro />
     <Botones />
-    <form id="formulario-registro">
+    <form action="/menu/impresion" method="GET" id="formulario-registro">
         <h3 class="text-center font-semibold">
             INFORMACIÓN GENERAL
         </h3>
@@ -83,7 +83,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                 <legend class="sr-only"></legend>
 
                 <div>
-                    <input name="impresoraFotocopiadora" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <input name="impresoraFotocopiadora" id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                         Es impresora o fotocopiadora
                     </label>
@@ -262,19 +262,19 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
             <legend class="sr-only"></legend>
 
             <div>
-                <input name="lector" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <input name="lector" id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Lector de CD/DVD
                 </label>
             </div>
             <div>
-                <input name="usb" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <input name="usb" id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Puertos USB
                 </label>
             </div>
             <div>
-                <input name="sd" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <input name="sd" id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                 <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Lector de Tarjetas SD
                 </label>
@@ -376,11 +376,388 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                 ACTUALIZA catálogos
             </button>
             </a>
+        </form>
             
-            <button type="button" id="btnImprimir" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+            <button type="button" onclick="abrirVentana()" class="w-50 h-22 focus:outline-none text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                 IMPRIMIR control específico
             </button>
-        </form>
+
+<script type="module">
+window.abrirVentana = function() {
+    // Funciones utilitarias
+    function getValor(selector) {
+        const el = document.querySelector(selector);
+        return el ? el.value : '';
+    }
+    function getSelect(selector) {
+        const el = document.querySelector(selector);
+        return el ? el.options[el.selectedIndex].text : '';
+    }
+    function getCheck(selector) {
+        const el = document.querySelector(selector);
+        return el ? (el.checked ? 'Sí' : 'No') : 'No';
+    }
+
+    const imagen = '<img src="/src/assets/CDMX_logo.png" alt="Logo CDMX" class="mx-1 my-4 w-40 h-auto" />';
+
+    // Inputs de texto
+    const identificador = getValor('input[name="identificador"]');
+    const modelo = getValor('input[name="modelo"]');
+    const inventario = getValor('input[name="inventario"]');
+    const marca = getValor('input[name="marca"]');
+    const serie = getValor('input[name="serie"]');
+    const capacidad = getValor('input[name="capacidad"]');
+    const procesadorTipo = getValor('input[name="procesadorTipo"]');
+    const procesadorVelocidad = getValor('input[name="procesadorVelocidad"]');
+    const RAM = getValor('input[name="RAM"]');
+    const segmento = getValor('input[name="segmento"]');
+    const marcaMonitor = getValor('input[name="marcaMonitor"]');
+    const SO = getValor('input[name="SO"]');
+    const estado = getValor('input[name="estado"]');
+    const observaciones = getValor('input[name="observaciones"]');
+    const area = getValor('input[name="area"]');
+    const cargo = getValor('input[name="cargo"]');
+
+    // Selects
+    const tipoEquipo = getSelect('select[name="tipoEquipo"]');
+    const tipoTecladocheckbox = getSelect('select[name="tipoTecladocheckbox"]');
+    const tipoMonitorcheckbox = getSelect('select[name="tipoMonitorcheckbox"]');
+    const tipoMousecheckbox = getSelect('select[name="tipoMousecheckbox"]');
+    const usuario = getSelect('select[name="usuario"]');
+    const responsable = getSelect('select[name="responsable"]');
+
+    // Checkboxes
+    const impresoraFotocopiadora = getCheck('input[name="impresoraFotocopiadora"]');
+    const teclado = getCheck('input[name="teclado"]');
+    const monitor = getCheck('input[name="monitor"]');
+    const mouse = getCheck('input[name="mouse"]');
+    const lector = getCheck('input[name="lector"]');
+    const usb = getCheck('input[name="usb"]');
+    const sd = getCheck('input[name="sd"]');
+
+    const tecladoHtml = teclado === 'Sí'
+        ? `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" checked disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Teclado</label>
+                </div>
+                <div>
+                    <input type="text" value="${tipoTecladocheckbox}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                </div>
+            </div>`
+        : `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Teclado</label>
+                </div>
+            </div>`;
+
+        // Para monitor
+        const monitorHtml = monitor === 'Sí'
+        ? `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" checked disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Monitor</label>
+                </div>
+                <div>
+                    <input type="text" value="${tipoMonitorcheckbox}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                </div>
+            </div>`
+        : `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Monitor</label>
+                </div>
+            </div>`;
+
+        // Para mouse
+        const mouseHtml = mouse === 'Sí'
+        ? `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" checked disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mouse</label>
+                </div>
+                <div>
+                    <input type="text" value="${tipoMousecheckbox}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                </div>
+            </div>`
+        : `<div class="flex items-center space-x-4">
+                <div>
+                    <input type="checkbox" disabled class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                    <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Mouse</label>
+                </div>
+            </div>`;
+
+    const contenido = `
+        <header class="flex items-center">
+            ${imagen}
+            <div class="ml-1 text-gray-500">
+                <p class="text-xs">SECRETARIA DE OBRAS Y SERVICIOS</p>
+                <p class="text-xs">DIRECCIÓN GENERAL DE SERVICIOS URBANOS Y SUSTENTABILIDAD</p>
+                <p class="text-xs">DIRECCIÓN DE ALUMBRADO PÚBLICO</p>
+            </div>
+        </header>
+        <div class="p-8">
+            <h3 class="text-center font-semibold mb-6">INFORMACIÓN GENERAL</h3>
+            <div class="flex space-x-10">
+                <div class="flex flex-col">
+                    <div class="max-w-25 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">IDENTIFICADOR</label>
+                            <input type="text" value="${identificador}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo de Equipo</label>
+                            <input type="text" value="${tipoEquipo}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Modelo</label>
+                            <input type="text" value="${modelo}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Núm Inventario</label>
+                            <input type="text" value="${inventario}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                            <input type="text" value="${marca}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número serie</label>
+                            <input type="text" value="${serie}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <fieldset>
+                        <legend class="sr-only"></legend>
+                        <div>
+                            <input type="checkbox" ${impresoraFotocopiadora === 'Sí' ? 'checked' : ''} disabled class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                            <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Es impresora o fotocopiadora</label>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <h3 class="text-center font-semibold mt-8 mb-6">INFORMACIÓN TÉCNICA</h3>
+            <div class="flex flex-row">
+                <div class="max-w-50 mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Capacidad Disco Duro</label>
+                        <input type="text" value="${capacidad}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+                <div class="max-w-50 mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tipo Procesador</label>
+                        <input type="text" value="${procesadorTipo}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+                <div class="max-w-50 mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Velocidad Procesador</label>
+                        <input type="text" value="${procesadorVelocidad}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+                <div class="max-w-50 mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Capacidad Memoria RAM</label>
+                        <input type="text" value="${RAM}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex space-x-10 mt-8">
+                <div class="flex flex-col space-y-2">
+                    ${tecladoHtml}
+                    ${monitorHtml}
+                    ${mouseHtml}
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Segmento</label>
+                            <input type="text" value="${segmento}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca del Monitor</label>
+                            <input type="text" value="${marcaMonitor}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sistema Operativo</label>
+                            <input type="text" value="${SO}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend class="sr-only"></legend>
+                    <div>
+                        <input type="checkbox" ${lector === 'Sí' ? 'checked' : ''} disabled class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                        <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lector de CD/DVD</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" ${usb === 'Sí' ? 'checked' : ''} disabled class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                        <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Puertos USB</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" ${sd === 'Sí' ? 'checked' : ''} disabled class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm" />
+                        <label class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Lector de Tarjetas SD</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <h3 class="text-center font-semibold mt-8 mb-6">DIAGNÓSTICO</h3>
+            <div class="flex flex-col">
+                <div class="mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Estado Actual</label>
+                        <input type="text" value="${estado}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+                <div class="mx-4">
+                    <div class="mb-4">
+                        <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Observaciones</label>
+                        <input type="text" value="${observaciones}" readonly class="block w-full p-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-center font-semibold mt-8 mb-6">USUARIO Y RESPONSABLE</h3>
+            <div class="flex flex-col md:flex-row w-full gap-4 max-h-screen">
+                <div class="w-full md:w-1/2 flex flex-col">
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Usuario</label>
+                            <input type="text" value="${usuario}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-250 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Área</label>
+                            <input type="text" value="${area}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-50 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Responsable</label>
+                            <input type="text" value="${responsable}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                    <div class="max-w-250 mx-4">
+                        <div class="mb-4">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cargo</label>
+                            <input type="text" value="${cargo}" readonly class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    const estilos = `
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <style>
+            @media print {
+                html, body {
+                    width: 210mm;
+                    height: 297mm;
+                    margin: 0;
+                    padding: 0;
+                }
+                body {
+                    max-width: 190mm;
+                    margin: 10mm auto;
+                    font-size: 11pt;
+                }
+                .no-print {
+                    display: none !important;
+                }
+                /* Evita saltos de página dentro de los bloques principales */
+                .bloque, .p-8, .flex, .mb-4 {
+                    page-break-inside: avoid;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto 1rem auto;
+                }
+                h2, h3 {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    page-break-after: avoid;
+                }
+
+                .header-img {
+                    max-height: 60px !important;
+                    margin: 0 auto 8px auto !important;
+                    display: block;
+                }
+                .header-contenedor {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+                .p-8, .my-4, .mb-4 {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+            }
+            /* Opcional: ajusta el tamaño en pantalla también */
+            body {
+                max-width: 800px;
+                margin: 0 auto;
+                background: white;
+            }
+        </style>
+    `;
+
+    const win = window.open("", "DatosFormulario", "width=" + screen.width + ",height=" + screen.height);
+    if (win) {
+        win.document.write(`
+            <html>
+            <head>
+                <title>Datos del formulario</title>
+                ${estilos}
+            </head>
+            <body class="bg-white">
+                ${contenido}
+            </body>
+            </html>
+        `);
+        win.document.close();
+        win.onload = function() {
+          const img = win.document.querySelector('img');
+          if (img) {
+            img.onload = function() {
+              win.print();
+            };
+            // Si la imagen ya está en caché y cargada
+            if (img.complete) {
+              win.print();
+            }
+          } else {
+            win.print();
+          }
+        };
+    } else {
+        alert("Permite las ventanas emergentes para ver los datos.");
+    }
+}
+</script>
 
         </div>
     </div>
@@ -415,41 +792,4 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
         NUEVO REGISTO
     </button>
 </div>
-
-<script>
-const btnImprimir = document.getElementById('btnImprimir');
-if (btnImprimir) {
-  btnImprimir.addEventListener('click', function() {
-    const nombre = (document.getElementById('nombre') as HTMLInputElement | null)?.value || '';
-    const apellido = (document.getElementById('apellido') as HTMLInputElement | null)?.value || '';
-    // ...otros campos...
-
-    const datos = { nombre, apellido /*, otros campos */ };
-
-    let reporte = `
-      <!DOCTYPE html>
-      <html>
-      <head>
-        <meta charset="UTF-8">
-        <title>Reporte de Control Específico</title>
-      </head>
-      <body>
-        <h2>Reporte de Control Específico</h2>
-        <p><strong>Nombre:</strong> ${nombre}</p>
-        <p><strong>Apellido:</strong> ${apellido}</p>
-        <!-- ...otros campos... -->
-      </body>
-      </html>
-    `;
-    const ventana = window.open('', '', 'width=800,height=600');
-    if (ventana) {
-      ventana.document.write(reporte);
-      ventana.document.close();
-      ventana.print();
-    } else {
-      alert('No se pudo abrir la ventana de impresión. Por favor, permita las ventanas emergentes en su navegador.');
-    }
-  });
-}
-</script>
 </Layout>

@@ -18,61 +18,347 @@ const estado = url.searchParams.get('estado') ?? '';
 const observaciones = url.searchParams.get('observaciones') ?? '';
 ---
 
-<Layout title="Resguardo">
-    <Botones />
+<Layout title="Impresión">
     <Header />
+    <Botones />
+    <form id="formulario-registro">
+        <h3 class="text-center font-semibold">
+            INFORMACIÓN GENERAL
+        </h3>
+    <div class="flex space-x-10">
+        <div class="flex flex-col">
+            <div class="max-w-25 mx-4">
+                <div class="mb-4">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        IDENTIFICADOR
+                    </label>
+                    <input value={identificador} readonly type="text" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>
 
-    <div class="mt-8">
-        <h1 class="text-center text-2xl font-bold">CONTROL DE BIEN INFORMÁTICO</h1>
-        <div class="flex flex-col space-y-4 mt-4 mx-auto max-w-lg">
-            <div>
-                <label>IDENTIFICADOR</label>
-                <input type="text" value={identificador} readonly />
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Tipo de Equipo
+                    </label>
+                    <select value={tipoEquipo} disabled name="tipoEquipo" id="tipo_equipos" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Seleccione una opción</option>
+                        <option>PC</option>
+                        <option>ALL IN ONE</option>
+                        <option>LAPTOP</option>
+                        <option>NOTEBOOK</option>
+                        <option>IMPRESORA</option>
+                        <option>FOTOCOPIADORA</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <label>TIPO DE EQUIPO</label>
-                <input type="text" value={tipoEquipo} readonly />
+
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Modelo
+                    </label>
+                    <input name="modelo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
             </div>
-            <div>
-                <label>MODELO</label>
-                <input type="text" value={modelo} readonly />
+
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Núm Inventario
+                    </label>
+                    <input name="inventario" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
             </div>
-            <div>
-                <label>NÚMERO DE INVENTARIO</label>
-                <input type="text" value={inventario} readonly />
+        </div>
+
+        <div class="flex flex-col">
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Marca
+                    </label>
+                    <input name="marca" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
             </div>
-            <div>
-                <label>MARCA</label>
-                <input type="text" value={marca} readonly />
+
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Número serie
+                    </label>
+                    <input name="serie" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
             </div>
-            <div>
-                <label>NÚMERO DE SERIE</label>
-                <input type="text" value={serie} readonly />
+
+            <fieldset>
+                <legend class="sr-only"></legend>
+
+                <div>
+                    <input name="impresoraFotocopiadora" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Es impresora o fotocopiadora
+                    </label>
+                </div>
+            </fieldset>
+            
+        </div>
+    </div>
+
+    <h3 class="text-center font-semibold">
+        INFORMACIÓN TÉCNICA
+    </h3>
+    <div class="flex flex-row">
+        <div class="max-w-50 mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Capacidad Disco Duro
+                </label>
+                <input name="capacidad" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-            <div>
-                <label>CAPACIDAD DISCO DURO</label>
-                <input type="text" value={capacidad} readonly />
+        </div>
+        
+        <div class="max-w-50 mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Tipo Procesador
+                </label>
+                <input name="procesadorTipo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-            <div>
-                <label>TIPO PROCESADOR</label>
-                <input type="text" value={procesadorTipo} readonly />
+        </div>
+        
+        <div class="max-w-50 mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Velocidad Procesador
+                </label>
+                <input name="procesadorVelocidad" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
-            <div>
-                <label>VELOCIDAD PROCESADOR</label>
-                <input type="text" value={procesadorVelocidad} readonly />
-            </div>
-            <div>
-                <label>CAPACIDAD MEMORIA RAM</label>
-                <input type="text" value={RAM} readonly />
-            </div>
-            <div>
-                <label>ESTADO ACTUAL</label>
-                <input type="text" value={estado} readonly />
-            </div>
-            <div>
-                <label>OBSERVACIONES</label>
-                <textarea readonly>{observaciones}</textarea>
+        </div>
+        
+        <div class="max-w-50 mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Capacidad Memoria RAM
+                </label>
+                <input name="RAM" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
         </div>
     </div>
+    
+    <div class="flex space-x-10">
+        <div class="flex flex-col space-y-2">
+            <div class="flex items-center space-x-4">
+                <!-- Checkbox -->
+                <div>
+                    <input
+                        name="teclado"
+                        id="checkbox-1" 
+                        type="checkbox" 
+                        class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    >
+                    <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Teclado
+                    </label>
+                </div>
+
+                <!-- Lista desplegable -->
+                <div>
+                    <select
+                        name="tipoTecladocheckbox" 
+                        id="tipo_teclado" 
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                        <option>Seleccione una opción</option>
+                        <option>Menor a 1 año</option>
+                        <option>De 1 a 3 años</option>
+                        <option>Entre 3-5 años</option>
+                        <option>Mayor a 6 años</option>
+                        <option>NO APLICA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Checkbox -->
+                <div>
+                    <input
+                        name="monitor" 
+                        id="checkbox-1" 
+                        type="checkbox" 
+                        class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    >
+                    <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Monitor
+                    </label>
+                </div>
+
+                <!-- Lista desplegable -->
+                <div>
+                    <select
+                        name="tipoMonitorcheckbox"
+                        id="tipo_monitor" 
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                        <option>Seleccione una opción</option>
+                        <option>Menor a 1 año</option>
+                        <option>De 1 a 3 años</option>
+                        <option>Entre 3-5 años</option>
+                        <option>Mayor a 6 años</option>
+                        <option>NO APLICA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <!-- Checkbox -->
+                <div>
+                    <input
+                        name="mouse" 
+                        id="checkbox-1" 
+                        type="checkbox" 
+                        class="w-4 h-4 ml-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                    >
+                    <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Mouse
+                    </label>
+                </div>
+
+                <!-- Lista desplegable -->
+                <div>
+                    <select 
+                        name="tipoMousecheckbox"
+                        id="tipo_mouse" 
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    >
+                        <option>Seleccione una opción</option>
+                        <option>Menor a 1 año</option>
+                        <option>De 1 a 3 años</option>
+                        <option>Entre 3-5 años</option>
+                        <option>Mayor a 6 años</option>
+                        <option>NO APLICA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Segmento
+                    </label>
+                    <input name="segmento" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Marca del Monitor
+                    </label>
+                    <input name="marcaMonitor" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>
+
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Sistema Operativo
+                    </label>
+                    <input name="SO" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>   
+        </div>
+        <fieldset>
+            <legend class="sr-only"></legend>
+
+            <div>
+                <input name="lector" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                    Lector de CD/DVD
+                </label>
+            </div>
+            <div>
+                <input name="usb" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                    Puertos USB
+                </label>
+            </div>
+            <div>
+                <input name="sd" checked id="checkbox-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="checkbox-1" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                    Lector de Tarjetas SD
+                </label>
+            </div>
+        </fieldset>
+    </div>
+    <h3 class="text-center font-semibold">
+        DIAGNÓSTICO
+    </h3>
+    <div class="flex flex-col">
+        <div class="mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Estado Actual
+                </label>
+                <input name="estado" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+        </div>
+
+        <div class="mx-4">
+            <div class="mb-4">
+                <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Observaciones
+                </label>
+                <input name="observaciones" type="text" id="small-input" class="block w-full p-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            </div>
+        </div>
+    </div>
+
+    <h3 class="text-center font-semibold">
+        USUARIO Y RESPONSABLE
+    </h3>
+<div class="flex flex-col md:flex-row w-full gap-4 max-h-screen">
+    <div class="w-full md:w-1/2 flex flex-col">
+        <div class="max-w-50 mx-4">
+            <div class="mb-4">
+                <label for="usuario" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                    Usuario
+                </label>
+                <select name="usuario" id="usuario" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option>Seleccione una opción</option>
+                    </select>
+                </div>
+        </div>
+            
+            <div class="max-w-250 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Área
+                    </label>
+                    <input name="area" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>
+            
+            <div class="max-w-50 mx-4">
+                <div class="mb-4">
+                    <label for="responsable" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Responsable
+                    </label>
+                    <select name="responsable" id="responsable" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option>Seleccione una opción</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="max-w-250 mx-4">
+                <div class="mb-4">
+                    <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                        Cargo
+                    </label>
+                    <input name="cargo" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                </div>
+            </div>
+        </div>
 </Layout>
