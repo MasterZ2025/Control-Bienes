@@ -96,7 +96,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
     <h3 class="text-center font-semibold">
         INFORMACIÓN TÉCNICA
     </h3>
-    <div class="flex flex-row">
+    <div class="flex flex-row justify-center p-10">
         <div class="max-w-50 mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -134,7 +134,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
         </div>
     </div>
     
-    <div class="flex space-x-10">
+    <div class="flex space-x-10 justify-center">
         <div class="flex flex-col space-y-2">
             <div class="flex items-center space-x-4">
                 <!-- Checkbox -->
@@ -284,13 +284,14 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
     <h3 class="text-center font-semibold">
         DIAGNÓSTICO
     </h3>
+<div class="flex space-x-10 justify-center p-10">
     <div class="flex flex-col">
         <div class="mx-4">
             <div class="mb-4">
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Estado Actual
                 </label>
-                <input name="estado" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <input name="estado" type="text" id="small-input" class="block w-4xl p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
         </div>
 
@@ -299,15 +300,16 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                     Observaciones
                 </label>
-                <input name="observaciones" type="text" id="small-input" class="block w-full p-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <input name="observaciones" type="text" id="small-input" class="block w-4xl p-10 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
             </div>
         </div>
     </div>
-
+</div>
     <h3 class="text-center font-semibold">
         USUARIO Y RESPONSABLE
     </h3>
-<div class="flex flex-col md:flex-row w-full gap-4 max-h-screen">
+    <div class="flex space-x-10 justify-center p-10">
+<div class="flex flex-col md:flex-row gap-4">
     <div class="w-full md:w-1/2 flex flex-col">
         <div class="max-w-50 mx-4">
             <div class="mb-4">
@@ -325,7 +327,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
                     <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Área
                     </label>
-                    <input name="area" type="text" id="small-input" class="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <input name="area" type="text" id="small-input" class="block w-96 p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 </div>
             </div>
             
@@ -381,6 +383,7 @@ import DoubleArrow from "../../assets/previous-back-arrow.svg";
             <button type="button" onclick="abrirVentana()" class="w-50 h-22 focus:outline-none text-white bg-lime-600 hover:bg-lime-700 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
                 IMPRIMIR control específico
             </button>
+</div>
 
 <script type="module">
 window.abrirVentana = function() {
